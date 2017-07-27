@@ -1,0 +1,4 @@
+[plugin]
+description = "UNR Only - Sets app name as subdirectory on root url"
+version = "1.0.0"
+[plugin.config]

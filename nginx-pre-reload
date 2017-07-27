@@ -1,0 +1,7 @@
+!#/usr/bin/env bash
+set -eo pipefail; [[ $DOKKU_TRACE ]] && set -x
+source "$PLUGIN_AVAILABLE_PATH/config/functions"
+
+APP=$1
+
+cat $DOKKU_ROOT/$APP/nginx.conf | sed -n '/#Begin/./#End/p' > $DOKKU_ROOT/nginxconf/location/$APP.conf
