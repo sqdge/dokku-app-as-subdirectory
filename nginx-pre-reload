@@ -4,4 +4,5 @@ source "$PLUGIN_AVAILABLE_PATH/config/functions"
 
 APP=$1
 
+echo 'Adding App as Subdirectory in Root URL'
 cat $DOKKU_ROOT/$APP/nginx.conf | sed -n '/#Begin/,/#End/p' > $DOKKU_ROOT/$APP/location.conf
